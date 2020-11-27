@@ -1,53 +1,47 @@
-set number
-set ruler
-set ignorecase
-set smartcase
+set autochdir
+set autoindent
+set background=dark
 set colorcolumn=80
-set noexpandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set title
-set mouse=
+set fdo-=search
+set formatoptions+=cqj
+set hlsearch
+set ignorecase
 set lazyredraw
 set list
-set nowrap
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
-set textwidth=0
-set hlsearch
-set formatoptions+=cqj
-set autoindent
-set fdo-=search
-set ttimeout
-set timeoutlen=1000 ttimeoutlen=0
+set mouse=
 set noconfirm
-set background=dark
+set noexpandtab
+set nowrap
+set number
+set ruler
+set shiftwidth=4
+set smartcase
+set softtabstop=4
+set tabstop=4
+set textwidth=0
+set timeoutlen=1000 ttimeoutlen=0
+set title
+set ttimeout
+set vb t_vb=
 
 set sj=12
 set scrolloff=0
 
 syntax enable
-:colorscheme elflord
+:colorscheme desert
 
 " General
 nnoremap <CR> :noh<CR><CR>
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 nnoremap <F2> :source ~/.vimrc<CR>
 vnoremap <F3> :'<,'>:w !espeak 2> /dev/null<CR>
+nnoremap <F4> :set invwrap<CR>
 nnoremap <F5> :!make<CR>
 nnoremap <F6> :!make clean<CR>
 nnoremap <F9> :set invspell<CR>
 nnoremap <F11> :%s/    /\t/g<CR>
 nnoremap <F12> :%s/\t/    /g<CR>
-
-" Buffers
-nnoremap <Tab> <C-w><C-w>
-nnoremap <S-Tab> :bn<CR>
-nnoremap gn :bn<CR>
-nnoremap gp :bN<CR>
-nnoremap gd :bp\|bd#<CR>
-nnoremap gD :bd<CR>
-nnoremap Q @@
 
 " Movements
 nnoremap w W
@@ -62,14 +56,31 @@ nnoremap <M-SPACE> <C-u>zz
 nnoremap <PageUp> <PageUp>zz
 nnoremap <PageDown> <PageDown>zz
 
+" Buffers
+nnoremap <Tab> <C-w><C-w>
+nnoremap <S-Tab> :bn<CR>
+nnoremap gn :bn<CR>
+nnoremap gp :bN<CR>
+nnoremap gb :ls<CR>:b<Space>
+nnoremap gd :bp\|bd#<CR>
+nnoremap gD :bd<CR>
+nnoremap Q @@
+
 " Window Management
 nnoremap <M-w> <C-w>
 nnoremap <M-q> :q!<CR>
+nnoremap <C-w>f :vertical :rightb wincmd f<CR>
 
-autocmd Filetype scheme setlocal sts=2 shiftwidth=2 expandtab
+autocmd Filetype csharp setlocal sts=2 shiftwidth=2 expandtab
 autocmd Filetype haskell setlocal sts=2 shiftwidth=4 expandtab
 autocmd Filetype html setlocal ts=2 shiftwidth=2 sts=2
 autocmd Filetype javascript setlocal ts=2 shiftwidth=2 sts=2
+autocmd Filetype json setlocal sts=2 shiftwidth=2 expandtab
+autocmd Filetype scheme setlocal sts=2 shiftwidth=2 expandtab
+autocmd Filetype typescript setlocal sts=2 shiftwidth=2 expandtab
+
+" For vsvim
+set backspace=indent,eol,start
 
 """" NEOVIM DEFAULTS
 
