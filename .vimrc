@@ -10,7 +10,6 @@ set ignorecase
 set lazyredraw
 set list
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
-set mouse=
 set noconfirm
 set noexpandtab
 set nowrap
@@ -26,11 +25,14 @@ set title
 set ttimeout
 set vb t_vb=
 
-set sj=12
+set sj=-50
 set scrolloff=0
 
 syntax enable
 :colorscheme desert
+
+" Mouse
+set mouse=n
 
 " General
 nnoremap <CR> :noh<CR><CR>
