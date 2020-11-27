@@ -43,19 +43,24 @@ nnoremap <F6> :!make clean<CR>
 nnoremap <F9> :set invspell<CR>
 nnoremap <F11> :%s/    /\t/g<CR>
 nnoremap <F12> :%s/\t/    /g<CR>
+nnoremap <C-s> :%s/
+vnoremap <C-s> :s/
+
+" Registers
+noremap <M-p> "+p
+noremap <M-S-p> "*p
+vnoremap <M-y> "+y
+vnoremap <M-S-y> "*y
 
 " Movements
-nnoremap w W
-nnoremap e E
-nnoremap b B
-nnoremap gh 0
-nnoremap gl $
-nnoremap { {zz
-nnoremap } }zz
-nnoremap <SPACE> <C-d>zz
-nnoremap <M-SPACE> <C-u>zz
-nnoremap <PageUp> <PageUp>zz
-nnoremap <PageDown> <PageDown>zz
+noremap gh 0
+noremap gl $
+noremap { {zz
+noremap } }zz
+noremap <SPACE> <C-d>zz
+noremap <M-SPACE> <C-u>zz
+noremap <PageUp> <PageUp>zz
+noremap <PageDown> <PageDown>zz
 
 " Buffers
 nnoremap <Tab> <C-w><C-w>
