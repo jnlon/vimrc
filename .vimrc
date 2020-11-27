@@ -1,5 +1,6 @@
 set autochdir
 set autoindent
+set autowrite
 set background=dark
 set colorcolumn=80
 set fdo-=search
