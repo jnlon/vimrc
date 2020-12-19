@@ -11,7 +11,7 @@ set lazyredraw
 set list
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set noconfirm
-set noexpandtab
+set expandtab
 set nowrap
 set number
 set ruler
@@ -56,6 +56,15 @@ vnoremap <M-y> "+y
 vnoremap <M-S-y> "*y
 
 " Movements
+inoremap <M-j> <Down>
+inoremap <M-k> <Up>
+inoremap <M-h> <Left>
+inoremap <M-l> <Right>
+inoremap <M-e> <Esc>e
+inoremap <M-w> <Esc>w
+inoremap <M-b> <Esc>b
+
+noremap gl $
 noremap gh 0
 noremap gl $
 noremap { {zz
