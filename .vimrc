@@ -4,7 +4,7 @@ set autowrite
 set background=dark
 set colorcolumn=80
 set fdo-=search
-set formatoptions+=cqj
+set formatoptions+=jcroql
 set hlsearch
 set ignorecase
 set lazyredraw
@@ -43,14 +43,15 @@ nnoremap <F4> :set invwrap<CR>
 nnoremap <F5> :!make<CR>
 nnoremap <F6> :!make clean<CR>
 nnoremap <F9> :set invspell<CR>
-nnoremap <F11> :%s/    /\t/g<CR>
-nnoremap <F12> :%s/\t/    /g<CR>
 nnoremap <C-s> :%s/
-vnoremap <C-s> :s/
+vnoremap <C-s> y:%s/<C-r>"/
+vnoremap <M-s> :s/
 
 " Registers
 noremap <M-p> "+p
 noremap <M-S-p> "*p
+inoremap <M-p> <Esc>"+pi
+inoremap <M-S-p> <Esc>"*pi
 vnoremap <M-y> "+y
 vnoremap <M-S-y> "*y
 
