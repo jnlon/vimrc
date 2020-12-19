@@ -10,7 +10,7 @@ set ignorecase
 set lazyredraw
 set list
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
-set noconfirm
+set confirm
 set expandtab
 set nowrap
 set number
