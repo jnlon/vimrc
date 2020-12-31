@@ -4,7 +4,7 @@ set autowrite
 set background=dark
 set colorcolumn=80
 set fdo-=search
-set formatoptions+=jcroql
+set formatoptions=jcql
 set hlsearch
 set ignorecase
 set lazyredraw
