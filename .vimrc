@@ -1,4 +1,5 @@
-set autochdir
+"set autochdir
+let g:netrw_keepdir=0
 set autoindent
 set autowrite
 set background=dark
@@ -79,7 +80,7 @@ nnoremap <Tab> <C-w><C-w>
 nnoremap <S-Tab> :bn<CR>
 nnoremap gn :bn<CR>
 nnoremap gp :bN<CR>
-nnoremap gb :ls<CR>:b<Space>
+nnoremap gb :pwd\|buffers<CR>:buffer<Space>
 nnoremap gd :bp\|bd#<CR>
 nnoremap gD :bd<CR>
 nnoremap Q @@
@@ -96,6 +97,8 @@ autocmd Filetype javascript setlocal ts=2 shiftwidth=2 sts=2
 autocmd Filetype json setlocal sts=2 shiftwidth=2 expandtab
 autocmd Filetype scheme setlocal sts=2 shiftwidth=2 expandtab
 autocmd Filetype typescript setlocal sts=2 shiftwidth=2 expandtab
+autocmd Filetype php filetype indent off
+autocmd Filetype php setlocal noexpandtab
 
 " For vsvim
 set backspace=indent,eol,start
