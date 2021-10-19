@@ -29,6 +29,9 @@ set vb t_vb=
 set scrolljump=1
 set scrolloff=1
 set showcmd
+set laststatus=2
+set wildmenu
+set history=1000
 
 syntax enable
 :colorscheme desert
@@ -43,24 +46,20 @@ nnoremap <F2> :source ~/.vimrc<CR>
 nnoremap <F9> :set invspell<CR>
 nnoremap <C-s> :w!<CR>
 inoremap <C-s> <Esc>:w!<CR>a
-nnoremap <M-s> :saveas 
 nnoremap <C-q> :q!
-nnoremap <Leader>r :.-1r!
+nnoremap <Leader><Bar> :.-1r!
 vnoremap <C-s> y:%s/<C-r>"/
 
-vnoremap <Leader>y "+y
-vnoremap <Leader>p "+p
+" Yanking
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>P "+P
 
 " Movements
-nnoremap <C-n> 6<C-e>
-nnoremap <C-p> 6<C-y>
 inoremap <M-j> <Down>
 inoremap <M-k> <Up>
 inoremap <M-h> <Left>
 inoremap <M-l> <Right>
-inoremap <M-e> <Esc>e
-inoremap <M-w> <Esc>w
-inoremap <M-b> <Esc>b
 
 noremap gl $
 noremap gh 0
@@ -92,4 +91,3 @@ autocmd Filetype scheme setlocal sts=2 shiftwidth=2 expandtab
 autocmd Filetype typescript setlocal sts=2 shiftwidth=2 expandtab
 autocmd Filetype php filetype indent off
 autocmd Filetype php setlocal noexpandtab
-au BufNewFile,BufRead /dev/shm/gopass.* setlocal noswapfile nobackup noundofile
