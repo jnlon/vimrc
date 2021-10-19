@@ -28,6 +28,7 @@ set ttimeout
 set vb t_vb=
 set scrolljump=1
 set scrolloff=1
+set showcmd
 
 syntax enable
 :colorscheme desert
