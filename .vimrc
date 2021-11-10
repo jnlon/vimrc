@@ -43,7 +43,8 @@ set mouse=
 nnoremap <CR> :noh<CR><CR>
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 nnoremap <F2> :source ~/.vimrc<CR>
-nnoremap <F9> :set invspell<CR>
+nnoremap <Leader>s :set invspell<CR>
+nnoremap <Leader>w :set invwrap<CR>
 nnoremap <C-s> :w!<CR>
 inoremap <C-s> <Esc>:w!<CR>a
 nnoremap <C-q> :q!
