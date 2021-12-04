@@ -50,6 +50,7 @@ inoremap <C-s> <Esc>:w!<CR>a
 nnoremap <C-q> :q!
 nnoremap <Leader><Bar> :.-1r!
 vnoremap <C-s> y:%s/<C-r>"/
+nnoremap <leader>cd :cd %:p:h<CR>
 
 " Yanking
 noremap <Leader>y "+y
